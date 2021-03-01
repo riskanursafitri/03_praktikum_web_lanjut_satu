@@ -29,3 +29,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //1. Halaman Home (routes biasa)
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+//2. Halaman produk (routes prefix)
+Route::prefix('/product')->group(function(){
+    Route::get('/product', [ProductController::class, 'index'])->name('product');
+});
+
