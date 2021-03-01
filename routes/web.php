@@ -40,3 +40,5 @@ Route::get('/news/{title}', [NewsController::class, 'index'])->name('news');
 //4. Halaman About-us (routes biasa)
 Route::get('/about-us', [AboutController::class, 'index'])->name('about');
 
+//5. Halaman contact-us (routes resource only)
+Route::resource('/contact-us', ContactController::class,['only' => ['index'] ]);
