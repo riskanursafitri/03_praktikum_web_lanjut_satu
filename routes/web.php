@@ -37,3 +37,6 @@ Route::prefix('/product')->group(function(){
 //3. Halaman News (routes parameter)
 Route::get('/news/{title}', [NewsController::class, 'index'])->name('news');
 
+//4. Halaman About-us (routes biasa)
+Route::get('/about-us', [AboutController::class, 'index'])->name('about');
+
